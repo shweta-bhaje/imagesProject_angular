@@ -1,0 +1,29 @@
+<!-- <p>show works!</p> -->
+<!-- <ul>
+    <li class="l" *ngFor="let items of allData">
+       
+        <img  style="width: 20%;height: 20%;object-fit: cover;" [src]="'data:image/png;base64,'+items.picture" alt="Title" />
+<h3> {{items.placeName}} </h3>
+<div>{{items.discription}}</div>
+    </li>
+</ul> --> 
+<div class="back">
+    <input class="search" type="search" [(ngModel)]="searchText" placeholder="Search"/>
+    
+<table class="table" cellspacing="10px" align="center">
+
+    <tr>
+        <td class="td"><b>Place Name</b></td>
+        <td class="td"><b>Discription</b></td>
+        <td class="td" align=center><b>Picture</b></td>
+
+    </tr>
+    <tr *ngFor="let items of allData | filter:searchText">
+        <td class="td"> {{items.placeName}}</td>
+        <td class="td">{{items.discription}}</td>
+        <td class="pic" align="center">
+        <img  style="width: 53%;height: 53%;object-fit: cover;" [src]="'data:image/png;base64,'+items.picture" alt="Title" />
+        </td>
+    </tr>
+</table>
+</div>

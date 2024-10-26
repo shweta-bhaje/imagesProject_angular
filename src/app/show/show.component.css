@@ -1,0 +1,34 @@
+.back{
+    margin-top: 0px;
+    margin: 0%;
+    padding: 13px;
+    background-image:  url("/assets/images/pic.jpg");
+margin: 0px;
+ background-size: cover;
+ height: 100%;
+ width: 100%;
+ background-repeat: calc();
+}
+.td{
+    padding: 12px;
+    color: white;
+    font-size: 19px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.table{
+padding-top: 7px;
+    background-color: rgb(66, 13, 13);
+    width: 50%;
+    padding: 3px;
+}
+.pic{
+width: 50%;
+}
+.search{
+    margin-top: 0px;
+    width: 17%;
+    padding: 6px;
+    border-style: none;
+    line-height: 19px;
+   
+}

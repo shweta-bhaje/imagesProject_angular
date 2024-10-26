@@ -13,6 +13,7 @@ export function app(): express.Express {
   const indexHtml = join(serverDistFolder, 'index.server.html');
 
   const commonEngine = new CommonEngine();
+  const app = express();
 
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
@@ -24,7 +25,15 @@ export function app(): express.Express {
     maxAge: '1y',
     index: 'index.html',
   }));
-
+  // app.use((req, res, next) => {
+  //   res.setTimeout(50000, () => {  // 30-second timeout
+  //     console.log('Request timed out');
+  //     res.status(503).send('Service unavailable');
+  //   });
+  //   next();
+  // });
+  
+  
   // All regular routes use the Angular engine
   server.get('**', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;

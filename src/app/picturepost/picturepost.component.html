@@ -1,0 +1,10 @@
+
+<form class="back">
+   <h1 class="point">Add new historical place</h1>
+  <div class="head">Place Name  :</div>
+  <input class="name" type="text" [(ngModel)]="dataObj.placeName" name="placeName" value="placeName" [ngModelOptions]="{standalone: true}"/>
+    <!-- Place Discription:<input type="text" [(ngModel)]="dataObj.discription" name="discription"/> -->
+ <div class="head">Discription :</div> <textarea class="area" rows="5" cols="36" [(ngModel)]="dataObj.discription" name="discription"></textarea>
+    <div class="head"> Picture :</div><input class="f" type="file" width="50" (change)="onFileSelected($event)"/>
+ <br>  <br> <button class="button" (click)="save()">Click</button>
+</form>
